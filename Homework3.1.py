@@ -17,7 +17,3 @@ if c == '/' and b == 0:
 if c == '/' and b != 0:
     result4 = a/b
     print(result4)
-
-
-
-
