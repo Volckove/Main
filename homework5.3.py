@@ -7,9 +7,9 @@ for check in string.punctuation:
 
 words = text.split()
 
-capitalized_words = [word[0].upper() + word[1:].lower() for word in words if len(word) > 0]
+n = [word[0].upper() + word[1:].lower() for word in words if len(word) > 0]
 
-hashtag = ''.join(capitalized_words)
+hashtag = ''.join(n)
 
 b = '#' + hashtag
 
