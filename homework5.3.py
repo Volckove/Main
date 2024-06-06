@@ -3,14 +3,15 @@ import string
 text = input('Enter any text:')
 
 for check in string.punctuation:
-    text = text.replace(check,'')
-    text = text.replace(' ','')
+    text = text.replace(check, '')
 
-first_letter = text[0]
-c = first_letter.upper()
-n = text[1:]
+words = text.split()
 
-b = '#' + c + n
+capitalized_words = [word[0].upper() + word[1:].lower() for word in words if len(word) > 0]
+
+hashtag = ''.join(capitalized_words)
+
+b = '#' + hashtag
 
 if len(b) > 140:
  print(b[:140])
