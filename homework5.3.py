@@ -10,7 +10,7 @@ first_letter = text[0]
 c = first_letter.upper()
 n = text[1:]
 
-b = '#' + c+n
+b = '#' + c + n
 
 if len(b) > 140:
  print(b[:140])
