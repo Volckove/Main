@@ -9,10 +9,9 @@ def time(seconds):
     minutes, remaining_seconds = divmod(remaining_seconds, 60)
     seconds = remaining_seconds
 
-
-    if days == 1:
-        days_str = "1 день"
-    elif 2 <= days <= 4:
+    if days % 10 == 1 and days % 100 != 11:
+        days_str = f"{days} день"
+    elif 2 <= days % 10 <= 4 and (days % 100 < 10 or days % 100 >= 20):
         days_str = f"{days} дні"
     else:
         days_str = f"{days} днів"
